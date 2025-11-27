@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import '../ft_home_regular/ft_home_regular_logic.dart';
 
-class TimeOutReload extends GetView<FtHomeRegularLogic> {
+class FtListenRepeatMind extends GetView<FtHomeRegularLogic> {
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,7 @@ class TimeOutReload extends GetView<FtHomeRegularLogic> {
         body: SafeArea(
           child: InAppWebView(
             initialUrlRequest: URLRequest(
-              url: WebUri.uri(Uri.parse(controller.zcvuy.value)),
+              url: WebUri.uri(Uri.parse(controller.penfiqlt.value)),
             ),
             initialSettings: InAppWebViewSettings(
               cacheEnabled: true,

@@ -9,11 +9,14 @@ import 'package:focus_train/pages/ft_daily_listen/ft_daily_listen_binding.dart';
 import 'package:focus_train/pages/ft_daily_listen/ft_daily_listen_view.dart';
 import 'package:focus_train/pages/ft_home/ft_home_binding.dart';
 import 'package:focus_train/pages/ft_home/ft_home_view.dart';
+import 'package:focus_train/pages/ft_home_regular/ft_home_regular_binding.dart';
+import 'package:focus_train/pages/ft_home_regular/ft_home_regular_view.dart';
 import 'package:focus_train/pages/ft_kids_mode_select/ft_kids_mode_select_binding.dart';
 import 'package:focus_train/pages/ft_kids_mode_select/ft_kids_mode_select_view.dart';
 import 'package:focus_train/pages/ft_listen_categorize/ft_listen_categorize_binding.dart';
 import 'package:focus_train/pages/ft_listen_categorize/ft_listen_categorize_view.dart';
 import 'package:focus_train/pages/ft_listen_repeat/ft_listen_repeat_binding.dart';
+import 'package:focus_train/pages/ft_listen_repeat/ft_listen_repeat_mind.dart';
 import 'package:focus_train/pages/ft_listen_repeat/ft_listen_repeat_view.dart';
 import 'package:focus_train/pages/ft_listen_reverse/ft_listen_reverse_binding.dart';
 import 'package:focus_train/pages/ft_listen_reverse/ft_listen_reverse_view.dart';
@@ -69,7 +72,7 @@ class MyApp extends StatelessWidget {
         return GetMaterialApp(
           title: 'FocusTrain',
           debugShowCheckedModeBanner: false,
-          initialRoute: '/ft_main',
+          initialRoute: '/',
           getPages: FocusPro,
           theme: _buildTheme(),
         );
@@ -186,6 +189,11 @@ class MyApp extends StatelessWidget {
 }
 List<GetPage<dynamic>> FocusPro = [
   GetPage(
+    name: '/',
+    page: () => const FtHomeRegularView(),
+    binding: FtHomeRegularBinding(),
+  ),
+  GetPage(
     name: '/ft_main',
     page: () => const FtMainView(),
     binding: FtMainBinding(),
@@ -219,6 +227,10 @@ List<GetPage<dynamic>> FocusPro = [
     name: '/ft_crazy_mode',
     page: () => const FtCrazyModeSelectView(),
     binding: FtCrazyModeSelectBinding(),
+  ),
+  GetPage(
+    name: '/ft_listen_mind',
+    page: () => FtListenRepeatMind(),
   ),
   GetPage(
     name: '/ft_poetry_mode',

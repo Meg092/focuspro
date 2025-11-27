@@ -11,8 +11,8 @@ class FtHomeRegularView extends GetView<FtHomeRegularLogic> {
     return Scaffold(
       body: Center(
         child: Obx(
-          () => controller.lxksu.value
-              ? const CircularProgressIndicator(color: Colors.blueAccent)
+          () => controller.jbzs.value
+              ? const CircularProgressIndicator(color: Colors.purple)
               : buildError(),
         ),
       ),
@@ -26,7 +26,7 @@ class FtHomeRegularView extends GetView<FtHomeRegularLogic> {
         children: [
           IconButton(
             onPressed: () {
-              controller.enorilyb();
+              controller.iowhsjr();
             },
             icon: const Icon(
               Icons.restart_alt,
